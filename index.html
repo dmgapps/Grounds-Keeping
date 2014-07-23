@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+-->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <link rel="stylesheet"  href="css/query.ui.datepicker.mobile.css" /> 
+
+  <!--
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+  -->
+  <script type="text/javascript">
+  //var appid = ***APPID***;
+  //var siteUrl = "http://dmgdemos.com/myfamilyapp/authorized/app/";
+  </script>
+
+  <script type="text/javascript" src="phonegap.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript">
+      app.initialize();
+  </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+
+  <!-- layout code -->
+
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="./css/statusbox.css">
+
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="css/font-awesome-ie7.css"><![endif]-->
+  <link type="text/css" rel="stylesheet" href="./css/tweetfeed.css">
+  <link type="text/css" rel="stylesheet" href="./css/comment_boxes.css" />
+
+  <link href="css/framework-gallery.css"       rel="stylesheet"  type="text/css">
+  <link href="css/icons.css"       rel="stylesheet"  type="text/css">
+  <link href="css/retina.css"        rel="stylesheet"  type="text/css"   media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+
+
+<script src="js/main.js"></script>
+<script id="panel-init">
+
+
+</script>
+
+<style type="text/css">
+
+  .center-wrapper{
+  text-align: center;
+  margin: 0 auto;
+  }
+  .center-wrapper * {
+  margin: 0 auto;
+  }
+
+  .container {
+    width: 100%;
+    height:100%;
+  }
+
+
+
+  .imageWrap{
+      margin-left: calc((500px - 100%) *-(.75)); 
+  }
+
+  .container{
+      width: 100%; 
+      overflow: hidden;
+      max-width: 500px;
+  }
+
+
+
+</style>
+
+</head>
+<body>
+
+  
+<!--
+
+==============
+
+    Login
+
+==============
+
+-->
+
+
+<!--
+  <div data-role="page" id="Login">
+
+    
+
+    <div data-role="header" data-position="fixed">
+      <a data-iconpos="notext" data-role="button" data-icon="home" title="Home">Home</a>
+      <h1></h1>
+      <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+    </div>
+
+    <div data-role="content" role="main" >
+      <center><h3>Enter Circle Password</h3></center>
+      <input type="text" id="LoginInputText" placeholder="" />
+      
+      <fieldset class="ui-grid-solo">
+      <div class="ui-block-a"><a id="loginButton" onclick="javascript:checkLogin();" data-role="button" data-icon="flat-man" data-transition="flow" data-theme="a">Login</a></div>
+      <div id="LoginPopup" data-role="popup" data-theme="e" data-overlay-theme="a" data-transition="slideup" class="ui-content">
+       Login Incorrect
+      </div>
+      </fieldset>
+
+    </div>
+
+
+    <div id="overlay" data-role="popup" data-overlay-theme="a" class="ui-content">
+      <p>You Must First Login</p>
+    </div>
+
+
+  </div>
+
+-->
+  <!-- End Login -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+=================
+    
+      Home 
+
+==================
+-->
+
+
+  <div data-role="page" id="Home">
+
+    <div data-role="header" data-position="fixed">
+      <h1>Maintenance App</h1>
+    </div>
+
+    
+    <div data-role="content" role="main">
+      
+      <center>
+      
+
+
+      <div id="home-content">
+              
+        <fieldset class="ui-grid-solo">
+          <!-- <a href="#" class="ui-btn ui-btn-d"> Administrator Dashboard </a> -->
+          <a href="#ReportsForm" data-transition="flow" class="ui-btn ui-btn-d"> Create Report </a>
+        </fieldset>
+      
+      </div>
+      <br />
+      <br />
+      <br />
+      <img src="img/site-logo.png">
+
+
+      </center> 
+
+    </div> <!-- end of content -->
+
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed">
+
+
+
+    </div>
+
+  </div>
+
+  <!-- End of Home -->
+
+
+
+<!-- 
+=================
+      
+   Reports Tab
+
+==================
+-->
+
+
+    <div data-role="page" id="Reports">
+
+      <div data-role="header" data-position="fixed">
+        <a href="#Home" data-iconpos="notext" data-transition="flow" data-role="button" data-icon="arrow-l" title="Home">Back</a>
+        <h1></h1>
+      </div>
+
+      
+      <div data-role="content" role="main">
+
+            
+
+        
+        
+        <div id="home-content">
+                
+          <fieldset class="ui-grid-solo">
+
+            <a href="#ReportsForm" data-transition="flow" class="ui-btn ui-btn-d"> Maintenance </a>
+            <a href="#ReportsForm" data-transition="flow" class="ui-btn ui-btn-d"> Security </a>
+
+          </fieldset>
+        
+        </div>
+
+
+
+
+      </div> <!-- end of content -->
+
+
+      <!-- Footer -->
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a onclick="javascript:contactButtonClick();" data-rel="popup" data-transition="slideup"  data-icon="gear" >Invite Contacts</a></li>
+            <!--<li><a data-rel="popup" data-transition="slideup"  data-icon="refresh">Create New</a></li>-->
+            <li><a href="#popupMenu" data-rel="popup" data-role="button" data-icon="refresh" data-inline="true">Create New</a></li>
+            <!--<li><a data-rel="popup" data-transition="slideup"  data-icon="check">Settings</a></li>-->
+            <li><a href="javascript:showCreateNewPhotoCategory();">Form</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- End of Reports -->
+
+
+
+
+<!-- 
+=================
+      
+  Reports Form Tab
+
+==================
+-->
+
+
+    <div data-role="page" id="ReportsForm">
+
+      <div data-role="header" data-position="fixed">
+        <a href="#Home" data-iconpos="notext" data-transition="flow" data-role="button" data-icon="arrow-l" title="Home">Back</a>
+        <h1>Report</h1>
+      </div>
+
+      
+      <div data-role="content" role="main">
+        
+        
+        <div id="reports-form-content">
+                
+          <center>
+
+          <form method="post">
+
+            <div class="ui-field-contain">
+              <label for="fullname">Reporting Employee: </label>
+              <input type="text" name="fullname" id="fullName" placeholder="Your Name...">
+           
+              
+              <label for="storelocation">Store Location</label>
+              <input type="text" name="storeLocation" id="storeLocation" placeholder="Store Location...">
+
+              <label for="incidentreport">Incident Report</label>
+              <input type="text" name="incidentReport" id="incidentReport" placeholder="Incident Report..">
+
+              <br /><br />
+
+              <h3>Picture Source</h3>
+              <a href="javascript:takePicture();" data-role="button" data-theme="b">Take New Picture</a>
+
+              <br />
+
+              <div id="imageData"></div>
+              <!-- <img id="reportImage" src="" /> -->
+
+
+            </div>
+
+            <a href="javascript:sendForm();" data-role="button">Send Report</a>
+          </form>
+          </center>
+
+          <div data-role="popup" data-dismissible="false" data-transition="slideup" data-position-to="origin" id="reportOverlay" class="ui-content" data-theme="b" data-overlay-theme="a">
+          <p>Sending Report...</p>
+        </div>
+
+        </div>
+
+
+
+
+      </div> <!-- end of content -->
+
+
+      <!-- Footer -->
+      <div data-role="footer" data-position="fixed">
+
+      </div>
+
+    </div>
+
+    <!-- End of Reports Form -->
+
+
+
+</body>
+</html>
