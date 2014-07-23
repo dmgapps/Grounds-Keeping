@@ -41,10 +41,11 @@ function sendForm() {
 		var url = 'http://dmgdemos.com/mallapp/_server-scripts/uploadForm.php';
 
 		//'images[]': imageArray
-		var params = {'fileNames[]': fileNames, posted:true, fullname: fullName, storelocation: storeLocation, incidentreport: incidentReport};
+		var params = {'fileNames[]': fileNames, posted:true, fullname: fullName, storelocation: storeLocation, incidentreport: incidentReport, type: 'Grounds-Keeping'};
 
 		$.post(url, params, function(data) {
 			
+			console.log(data);
 			$( "#reportOverlay" ).popup("close");
 			//alert("Report Completed");
 
