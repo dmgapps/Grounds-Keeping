@@ -6,10 +6,10 @@
         id        = "com.digitalmktgrp.southgatemall"
         version   = "1.0.0">
 
-    <name>SOUTHGATE MALL</name>
+    <name>Grounds-Keeping</name>
 
     <description>
-        Southgate mall maintenance and reporting mobile application
+        Southgate Mall Grounds Keeping Mobile Application
     </description>
 
     <author href="http://digitalmktgrp.com" email="info@digitalmktgrp.com">
