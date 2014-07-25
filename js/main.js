@@ -39,7 +39,13 @@ function sendForm() {
 		var datastring = $("#reportPostForm").serialize();
 		datastring += '&type=Grounds-Keeping&posted=1';
 
-		console.log(datastring);
+		//append filenames
+		for(var i =0;i<fileNames.length;i++) {
+
+			datastring += '&fileNames[]=' + fileNames[i];
+
+		}
+
 
 		$.ajax({
 		            type: "POST",
