@@ -285,23 +285,92 @@
                 
           <center>
 
-          <form method="post">
+          <form method="post" id="reportPostForm">
 
             <div class="ui-field-contain">
+
+              <h4><u>Report Filed By</u></h4>
 
               <div data-role="fieldcontain">
               <label for="fullname">Reporting Employee: </label>
               <input type="text" name="fullname" id="fullName" placeholder="Your Name...">
               </div>
-           
+              
               <div data-role="fieldcontain">
-              <label for="storelocation">Store Location</label>
-              <input type="text" name="storeLocation" id="storeLocation" placeholder="Store Location...">
+              <label for="storelocation">Location of Incident:</label>
+              <input type="text" name="storeLocation" id="storeLocation" placeholder="Incident Location...">
               </div>
 
               <div data-role="fieldcontain">
-              <label for="incidentreport">Incident Report</label>
-              <input type="text" name="incidentReport" id="incidentReport" placeholder="Incident Report..">
+              <label for="incidentreport">Incident Description:</label>
+              <input type="text" name="incidentReport" id="incidentReport" placeholder="Incident Description...">
+              </div>
+              <br />
+
+              <h4><u>Injured Party Information</u></h4>
+
+              <div data-role="fieldcontain">
+              <label for="injuredtype">Injured Type:</label>
+                  
+                  <select name="injuredType" id="injuredType">
+                    <option value="Guest">Guest</option>
+                    <option value="Employee">Employee</option>
+                    <option value="Other">Other</option>
+                  </select>
+
+              </div>
+
+              <div data-role="fieldcontain">
+              <label for="injuredtype">Injured?</label>
+                  
+                  <select name="isInjured" id="isInjured">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                  
+              </div>
+
+              <div data-role="fieldcontain">
+              <label for="age">Injured Age: </label>
+              <input type="text" name="injuredAge" id="injuredAge" placeholder="Injured Age...">
+              </div>
+
+              <div data-role="fieldcontain">
+              <label for="injuredName">Injured Name: </label>
+              <input type="text" name="injuredName" id="injuredName" placeholder="Injured Name...">
+              </div>
+
+              <div data-role="fieldcontain">
+              <label for="injuredAddress">Injured Address: </label>
+              <input type="text" name="injuredAddress" id="injuredAddress" placeholder="Injured Address...">
+              </div>
+
+              <div data-role="fieldcontain">
+              <label for="injuredPhone">Injured Phone: </label>
+              <input type="text" name="injuredPhone" id="injuredPhone" placeholder="Injured Phone...">
+              </div>
+
+              <div data-role="fieldcontain">
+              <label for="injuredDescribe">Describe Injury: </label>
+              <input type="text" name="injuredDescribe" id="injuredDescribe" placeholder="Describe Injury...">
+              </div>
+              <br />
+
+              <h4><u>Witness Statement (optional)</u></h4>
+
+              <div data-role="fieldcontain">
+              <label for="witnessName">Witness Name: </label>
+              <input type="text" name="witnessName" id="witnessName" placeholder="Witness Name...">
+              </div>
+
+              <div data-role="fieldcontain">
+              <label for="witnessAddress">Witness Address: </label>
+              <input type="text" name="witnessAddress" id="witnessAddress" placeholder="Witness Address...">
+              </div>
+
+              <div data-role="fieldcontain">
+              <label for="witnessPhone">Witness Phone Number: </label>
+              <input type="text" name="witnessPhone" id="witnessPhone" placeholder="Witness Phone Number...">
               </div>
 
               <br /><br />
@@ -319,6 +388,7 @@
 
             <a href="javascript:sendForm();" data-role="button">Send Report</a>
           </form>
+
           </center>
 
           <div data-role="popup" data-dismissible="false" data-transition="slideup" data-position-to="origin" id="reportOverlay" class="ui-content" data-theme="b" data-overlay-theme="a">

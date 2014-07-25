@@ -34,33 +34,49 @@ function sendForm() {
 
 	else {
 
-		//logging
-
 
 		$( "#reportOverlay" ).popup("open");
-		var url = 'http://dmgdemos.com/mallapp/_server-scripts/uploadForm.php';
+		var datastring = $("#reportPostForm").serialize();
+		datastring += '&type=Grounds-Keeping&posted=1';
 
-		//'images[]': imageArray
-		var params = {'fileNames[]': fileNames, posted:true, fullname: fullName, storelocation: storeLocation, incidentreport: incidentReport, type: 'Grounds-Keeping'};
+		console.log(datastring);
 
-		$.post(url, params, function(data) {
-			
-			console.log(data);
-			$( "#reportOverlay" ).popup("close");
-			//alert("Report Completed");
+		$.ajax({
+		            type: "POST",
+		            url: "http://dmgdemos.com/mallapp/_server-scripts/uploadForm.php",
+		            data: datastring,
+		            success: function(data) {
 
-			imageArray = [];
-			fileNames = [];
-			updateHtml();
-			$('#fullName').val("");
-			$('#storeLocation').val("");
-			$('#incidentReport').val("");
-			$.mobile.navigate('#Home', { transition : "flow"});
+		            	$.mobile.navigate('#Home', { transition : "flow"});
 
-			
+		            	$( "#reportOverlay" ).popup("close");
+		            	imageArray = [];
+		            	fileNames = [];
+		            	updateHtml();
 
+		            	$('#fullName').val("");
+		            	$('#storeLocation').val("");
+		            	$('#incidentReport').val("");
+		            	$('#injuredType').val("");
+		            	$('#isInjured').val("");
+		            	$('#injuredAge').val("");
+		            	$('#injuredName').val("");
+		            	$('#injuredAddress').val("");
+		            	$('#injuredPhone').val("");
+		            	$('#injuredDescribe').val("");
+		            	$('#witnessName').val("");
+		            	$('#witnessAddress').val("");
+		            	$('#witnessPhone').val("");
 
-		});
+		            },
+		            error: function(error){
+
+		            	console.log(error);
+
+		            }
+		        });
+
+		
 
 	}
 
